@@ -1,5 +1,4 @@
 package com.sanches.app.blogtest.services;
-
 import com.sanches.app.blogtest.exceptions.NotFoundException;
 import com.sanches.app.blogtest.models.Category;
 import com.sanches.app.blogtest.models.dto.CategoryDTO;
