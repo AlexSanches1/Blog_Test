@@ -4,9 +4,7 @@ import com.sanches.app.blogtest.exceptions.NotFoundException;
 import com.sanches.app.blogtest.models.Category;
 import com.sanches.app.blogtest.models.dto.CategoryDTO;
 import com.sanches.app.blogtest.repositories.CategoryRepository;
-import javassist.tools.web.BadHttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;

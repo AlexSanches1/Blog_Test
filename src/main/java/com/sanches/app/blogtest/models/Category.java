@@ -2,7 +2,6 @@ package com.sanches.app.blogtest.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 
