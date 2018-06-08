@@ -26,8 +26,8 @@ public class CategoryService {
             category.setName(name);
             if (!alreadyExist(category.getName())) {
                 Category saveData = categoryRepository.save(category);
-                dto.setCategory(name);
-                dto.setId(category.getId());
+                dto.setCategory(saveData.getName());
+                dto.setId(saveData.getId());
             } else {
                 throw new NotFoundException();
             }

@@ -1,6 +1,7 @@
 package com.sanches.app.blogtest.controllers;
 
 import com.sanches.app.blogtest.models.dto.RequestPostInfoDTO;
+import com.sanches.app.blogtest.repositories.PostRepository;
 import com.sanches.app.blogtest.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,8 @@ public class PostController {
 
     @Autowired
     private PostService postService;
+    @Autowired
+    private PostRepository postRepository;
 
     @PostMapping("/create")
     public ResponseEntity createPost(RequestPostInfoDTO postInfoDTO) {
@@ -29,5 +32,10 @@ public class PostController {
     @GetMapping("/list")
     public ResponseEntity listPost() {
         return ResponseEntity.ok(postService.listPost());
+    }
+
+    @GetMapping("/delete_post/byId")
+    public void deleteById(Long id) {
+        postRepository.deleteById(id);
     }
 }
